@@ -1,3 +1,22 @@
+# 1. Realizar una tabla de multiplicar
+
+numero=int(input("Ingresa un número: "))
+
+for i in range(1,13):
+    print(f"{i}x{numero}={i*numero}")
+
+
+# 2. Crear un bucle que cuente los números pares hasta el 100
+
+contador=0
+for i in range(1,101):
+    if i % 2 == 0:
+        contador+=1
+print(f"La cantidad de numeros pares es: {contador}")
+
+
+# 3. Imprimir el siguiente patrón
+
 print("Solucion 1:")
 
 for i in range(1, 6):
