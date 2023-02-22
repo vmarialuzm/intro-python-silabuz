@@ -1,12 +1,21 @@
 # Cree una función con anotaciones, que tome una palabra y duplique sus letras y las retorne en una lista.
 
-def duplicar_letras(palabra:str)->list:
-    palabra_duplicada:list=[]
-    for letra in palabra:
-        for i in range(0,2):
-            palabra_duplicada.append(letra)
-        
-    return palabra_duplicada
+def duplicar_letras() -> list:
+    palabra: str = input("Ingrese una palabra: ")
+    cantidad_inicial: int = len(palabra)
+    duplicando_palabra: str = palabra * 2
 
-palabra:str=input("Ingrese una palabra: ")
-print(duplicar_letras(palabra))
+    res: list = []
+    count: int = 1
+
+    for p in duplicando_palabra:
+        if count > cantidad_inicial:
+            res.insert(res.index(p) + 1, p)
+        else:
+            res.append(p)
+        count += 1
+
+    return res
+
+
+print(duplicar_letras())
